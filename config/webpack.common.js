@@ -64,6 +64,14 @@ const commonConfig = {
           priority: -50
         }
       }
+    },
+    // true/multiple
+    // single
+    // object: name
+    runtimeChunk: {
+      name: function(entrypoint) {
+        return `jlu-${entrypoint.name}`
+      }
     }
   },
   module: {
